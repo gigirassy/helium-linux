@@ -31,7 +31,9 @@ jobs:
 
       - name: Maximize build space
         uses: ublue-os/remove-unwanted-software@v8
-
+        with: 
+          extra-squeeze: true
+          remove-swapfile: true
         
       - name: Remove default Helium source
         run: |
