@@ -27,7 +27,7 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
-        with: { submodules: true }
+        with: { submodules: true,  continue-on-error: true }
         
       - name: Remove default Helium source
         run: |
