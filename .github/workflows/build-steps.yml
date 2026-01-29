@@ -70,7 +70,7 @@ jobs:
       status: ${{ steps.build.outputs.status }}
     steps:
       - uses: actions/checkout@v4
-        with: { submodules: true }
+        with: { submodules: true, continue-on-error: true }
       - uses: ./.github/actions/build
         id: build
 
