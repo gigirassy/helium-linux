@@ -28,12 +28,6 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v4
         with: { submodules: true }
-
-      - name: Maximize build space
-        uses: ublue-os/remove-unwanted-software@695eb75bc387dbcd9685a8e72d23439d8686cba6
-        with: 
-          extra-squeeze: true
-          remove-swapfile: true
         
       - name: Remove default Helium source
         run: |
